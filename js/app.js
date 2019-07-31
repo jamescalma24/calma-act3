@@ -94,6 +94,7 @@ $(function(){
       }
 
       function generateAnswer(){
+          try {
               JOKE_SERVICE.answer()
               .then(function(res){
                 var ansimage = res.image;
@@ -120,5 +121,8 @@ $(function(){
                 console.log(noCount);
 
               })
+          } catch {
+              alert("Error");
+          }
       }
   })
